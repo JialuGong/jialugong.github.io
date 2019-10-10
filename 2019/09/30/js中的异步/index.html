@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="javascript,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES6中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
+<meta name="description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES5中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
+<meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js中的异步">
 <meta property="og:url" content="https://jialugong.github.io/2019/09/30/js中的异步/index.html">
 <meta property="og:site_name" content="four stacks and a half">
-<meta property="og:description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES6中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
+<meta property="og:description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES5中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-30T11:21:46.906Z">
+<meta property="og:updated_time" content="2019-10-10T16:34:12.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的异步">
-<meta name="twitter:description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES6中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
+<meta name="twitter:description" content="写在之前笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识 正文 ES5中的Promise对象 异步函数的使用方式 为什么使用异步函数  Promise对象要了解异步，首先应该了解js中的promise对象，因为我们知道，async函数返回的是一个promise对象，我">
 
 
 
@@ -327,8 +328,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-09-30T19:21:46+08:00">
-                2019-09-30
+              <time title="更新于" itemprop="dateModified" datetime="2019-10-11T00:34:12+08:00">
+                2019-10-11
               </time>
             
           </span>
@@ -394,7 +395,7 @@
       
         <h4 id="写在之前"><a href="#写在之前" class="headerlink" title="写在之前"></a>写在之前</h4><p>笔者是前端初学者，本文主要是对于javascript中异步一个简单的介绍以及列举一些简单的例子，对于js异步的理解，我也是刚刚入门，写这篇文章的目的仅仅是为了记录目前所掌握到的知识</p>
 <h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><ul>
-<li><h6 id="ES6中的Promise对象"><a href="#ES6中的Promise对象" class="headerlink" title="ES6中的Promise对象"></a>ES6中的Promise对象</h6></li>
+<li><h6 id="ES5中的Promise对象"><a href="#ES5中的Promise对象" class="headerlink" title="ES5中的Promise对象"></a>ES5中的Promise对象</h6></li>
 <li><h6 id="异步函数的使用方式"><a href="#异步函数的使用方式" class="headerlink" title="异步函数的使用方式"></a>异步函数的使用方式</h6></li>
 <li><h6 id="为什么使用异步函数"><a href="#为什么使用异步函数" class="headerlink" title="为什么使用异步函数"></a>为什么使用异步函数</h6></li>
 </ul>
@@ -440,6 +441,12 @@ Pending-->Rejected</pre>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/jialugong.github.io/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
 
       
       
@@ -449,8 +456,8 @@ Pending-->Rejected</pre>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/jialugong.github.io/2019/05/03/python1/" rel="next" title="python在多维线性回归中的应用">
-                <i class="fa fa-chevron-left"></i> python在多维线性回归中的应用
+              <a href="/jialugong.github.io/2019/09/02/bbb/" rel="next" title="一个吐槽">
+                <i class="fa fa-chevron-left"></i> 一个吐槽
               </a>
             
           </div>
@@ -458,6 +465,10 @@ Pending-->Rejected</pre>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/jialugong.github.io/2019/10/10/ES5中的新特性/" rel="prev" title="ES5中的新特性">
+                ES5中的新特性 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -536,7 +547,7 @@ Pending-->Rejected</pre>
               
                 <a href="/jialugong.github.io/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -553,6 +564,15 @@ Pending-->Rejected</pre>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -600,7 +620,7 @@ Pending-->Rejected</pre>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ES6中的Promise对象"><span class="nav-number">2.0.1.</span> <span class="nav-text">ES6中的Promise对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#异步函数的使用方式"><span class="nav-number">2.0.2.</span> <span class="nav-text">异步函数的使用方式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#为什么使用异步函数"><span class="nav-number">2.0.3.</span> <span class="nav-text">为什么使用异步函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise对象"><span class="nav-number">2.1.</span> <span class="nav-text">Promise对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#写在之前"><span class="nav-number">1.</span> <span class="nav-text">写在之前</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#ES5中的Promise对象"><span class="nav-number">2.0.1.</span> <span class="nav-text">ES5中的Promise对象</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#异步函数的使用方式"><span class="nav-number">2.0.2.</span> <span class="nav-text">异步函数的使用方式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#为什么使用异步函数"><span class="nav-number">2.0.3.</span> <span class="nav-text">为什么使用异步函数</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Promise对象"><span class="nav-number">2.1.</span> <span class="nav-text">Promise对象</span></a></li></ol></div>
             
 
           </div>
@@ -634,7 +654,7 @@ Pending-->Rejected</pre>
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.1k</span>
+    <span title="Site words total count">1.5k</span>
   
 </div>
 
