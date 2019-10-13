@@ -1826,7 +1826,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e3ffeb;
+  background: #189552;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2995,7 +2995,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("https://movie.douban.com/photos/photo/2073179342/");
+  background: url("http://47.92.141.59/images/back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
