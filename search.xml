@@ -28,9 +28,9 @@
 <li><h5 id="类"><a href="#类" class="headerlink" title="类"></a>类</h5>ES5中的类是一个基于原型OO模式的语法糖.简单单一的申明使得类模式的使用更加简单。类支持基于原型的继承，超级调用，实例以及静态方法和构造函数。</li>
 </ul>
 ]]></content>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
+      <categories>
+        <category>javascript</category>
+      </categories>
   </entry>
   <entry>
     <title>js中的异步</title>
@@ -69,9 +69,9 @@ Pending-->Rejected</pre>
 <li>Promise最终的返回状态有两种即resolved和rejected</li>
 </ul>
 ]]></content>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
+      <categories>
+        <category>javascript</category>
+      </categories>
   </entry>
   <entry>
     <title>一个吐槽</title>
@@ -84,9 +84,9 @@ Pending-->Rejected</pre>
 </li>
 </ul>
 ]]></content>
-      <tags>
-        <tag>java web</tag>
-      </tags>
+      <categories>
+        <category>java web</category>
+      </categories>
   </entry>
   <entry>
     <title>python在多维线性回归中的应用</title>
