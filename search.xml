@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>安装zsh中遇到的问题</title>
+    <url>/jialugong.github.io/2019/10/15/zsh/</url>
+    <content><![CDATA[<p>在使用zsh中，大概率会遇到<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">zsh：command not found:xxx</span><br></pre></td></tr></table></figure></p>
+<p>的问题。当然我也遇到了（呜呜<del>~~(&gt;_&lt;)</del>~~），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。</p>
+<ul>
+<li><p>解决方法一</p>
+<ul>
+<li><p>打开~.zshrc</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim .zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加一行脚本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">source ~.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>解决方法二<br>由于笔者没有.bash_profile这一文件，但是网上搜索到的诸多教程都是解决方法一。看过几篇文章后突然想到我将nvm、node等环境配置全部写在了bashrc里边，然后就试着运行了一下‘source .bashrc’,结果报了一大堆错误。突然想到，我用的是zsh，bash当然会报错（卒）。<br>所以，解决方法二，就是将.bashrc中关于node的配置copy到.zshrc里边。然后再</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> ~.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>问题就解决了。<br>就以node举栗(笔者使用nvm管理的node)：<br>将.bashrc中的<br><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export NVM_DIR="$HOME/.nvm"</span><br><span class="line">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm</span><br><span class="line">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure></p>
+<p>copy到~.zshrc下就可以啦。</p>
+<p>参考文章：<br><a href="[https://blog.csdn.net/lxn9492878lbl/article/details/80795413](https://blog.csdn.net/lxn9492878lbl/article/details/80795413">ubuntu 安装zsh终端</a><br><a href="[https://blog.csdn.net/u010954988/article/details/80404329](https://blog.csdn.net/u010954988/article/details/80404329">zsh:command not found</a></p>
+]]></content>
+      <tags>
+        <tag>oh-my-zsh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ES6中的新特性</title>
     <url>/jialugong.github.io/2019/10/10/ES5%E4%B8%AD%E7%9A%84%E6%96%B0%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<p>吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢</p>
