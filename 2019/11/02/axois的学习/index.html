@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="title: axios的学习&amp;amp;restful的理解date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过">
+<meta name="description" content="title: restful的实践date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过什么大项目）。于是我选择用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="four stacks and a half">
 <meta property="og:url" content="https://jialugong.github.io/jialugong.github.io/2019/11/02/axois的学习/index.html">
 <meta property="og:site_name" content="four stacks and a half">
-<meta property="og:description" content="title: axios的学习&amp;amp;restful的理解date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过">
+<meta property="og:description" content="title: restful的实践date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过什么大项目）。于是我选择用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-03T04:14:15.863Z">
+<meta property="og:updated_time" content="2019-11-10T13:03:13.616Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="four stacks and a half">
-<meta name="twitter:description" content="title: axios的学习&amp;amp;restful的理解date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过">
+<meta name="twitter:description" content="title: restful的实践date: 2019-11-02 10:06:01tags: restful  前记：为什么写下这篇文章？主要是想实践一下关于restful api的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过什么大项目）。于是我选择用">
 
 
 
@@ -317,8 +317,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-03T12:14:15+08:00">
-                2019-11-03
+              <time title="更新于" itemprop="dateModified" datetime="2019-11-10T21:03:13+08:00">
+                2019-11-10
               </time>
             
           </span>
@@ -355,7 +355,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  394
+                  389
                 </span>
               
 
@@ -393,7 +393,7 @@
 
       
         <hr>
-<p>title: axios的学习&amp;restful的理解<br>date: 2019-11-02 10:06:01<br>tags: restful</p>
+<p>title: restful的实践<br>date: 2019-11-02 10:06:01<br>tags: restful</p>
 <blockquote>
 <p>前记：为什么写下这篇文章？主要是想实践一下关于<a href="https://developer.github.com/v3/#json-p-callbacks" target="_blank" rel="noopener">restful api</a>的理念，在此前的web项目中，一直只采用get | post两种方式，并且对于api的命名十分不规范，这可能导致api接口十分的庞杂且紊乱，小项目还好，大项目可能就十分令人头大（虽然也没做过什么大项目）。于是我选择用<a href="http://www.axios-js.com/docs/" target="_blank" rel="noopener">axios</a>来实现本次的实践。为什么axios？（<del>当然是因为尤大的推荐了</del>），axios是使用promise进行异步管理，就告别了以前的回调函数可能出现的代码可读性差的问题。此外，axios还支持拦截器等功能。</p>
 </blockquote>
@@ -408,10 +408,12 @@
 </li>
 <li><h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4><p>假设存在这样一个API:</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">url:</span><span class="meta-keyword">/api/</span>user/<span class="number">123</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>它所表示的资源是一个json包，并且数据如下：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure></p>
-<div class="table-container">
+<p>它所表示的资源是一个json包，并且数据如下：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+
 <table>
 <thead>
 <tr>
@@ -423,22 +425,39 @@
 <th>DELETE</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>dscription</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>备注</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
 <td>返回的结果</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-</tbody>
-</table>
-</div>
-<ul>
-<li><h4 id="情景分析-重构library-admin部分"><a href="#情景分析-重构library-admin部分" class="headerlink" title="情景分析(重构library admin部分)"></a>情景分析(重构library admin部分)</h4></li>
-</ul>
+<tr>
+<td>- #### 情景分析(重构library admin部分)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 
       
     </div>
@@ -472,6 +491,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/jialugong.github.io/2019/12/14/surface/" rel="prev" title="surface-go使用心得">
+                surface-go使用心得 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -553,7 +576,7 @@
               
                 <a href="/jialugong.github.io/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -575,7 +598,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -626,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#restful-api"><span class="nav-number">1.</span> <span class="nav-text">restful api</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#methods"><span class="nav-number">2.</span> <span class="nav-text">methods</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情景分析-重构library-admin部分"><span class="nav-number">3.</span> <span class="nav-text">情景分析(重构library admin部分)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#restful-api"><span class="nav-number">1.</span> <span class="nav-text">restful api</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#methods"><span class="nav-number">2.</span> <span class="nav-text">methods</span></a></li></ol></div>
             
 
           </div>
@@ -660,7 +683,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.4k</span>
+    <span title="Site words total count">2.9k</span>
   
 </div>
 

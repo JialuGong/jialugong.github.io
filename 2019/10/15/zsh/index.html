@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在使用zsh中，大概率会遇到1zsh：command not found:xxx 的问题。当然我也遇到了（呜呜~~(&amp;gt;_&amp;lt;)~~），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一">
+<meta name="description" content="在使用zsh中，大概率会遇到 1zsh：command not found:xxx  的问题。当然我也遇到了（呜呜(&amp;gt;_&amp;lt;)），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一行脚">
 <meta name="keywords" content="oh-my-zsh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装zsh中遇到的问题">
 <meta property="og:url" content="https://jialugong.github.io/jialugong.github.io/2019/10/15/zsh/index.html">
 <meta property="og:site_name" content="four stacks and a half">
-<meta property="og:description" content="在使用zsh中，大概率会遇到1zsh：command not found:xxx 的问题。当然我也遇到了（呜呜~~(&amp;gt;_&amp;lt;)~~），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一">
+<meta property="og:description" content="在使用zsh中，大概率会遇到 1zsh：command not found:xxx  的问题。当然我也遇到了（呜呜(&amp;gt;_&amp;lt;)），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一行脚">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-10-15T12:48:50.303Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装zsh中遇到的问题">
-<meta name="twitter:description" content="在使用zsh中，大概率会遇到1zsh：command not found:xxx 的问题。当然我也遇到了（呜呜~~(&amp;gt;_&amp;lt;)~~），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一">
+<meta name="twitter:description" content="在使用zsh中，大概率会遇到 1zsh：command not found:xxx  的问题。当然我也遇到了（呜呜(&amp;gt;_&amp;lt;)），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。  解决方法一  打开~.zshrc 1vim .zshrc  添加一行脚">
 
 
 
@@ -356,7 +356,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  324
+                  325
                 </span>
               
 
@@ -393,8 +393,10 @@
       
 
       
-        <p>在使用zsh中，大概率会遇到<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh：command not found:xxx</span><br></pre></td></tr></table></figure></p>
-<p>的问题。当然我也遇到了（呜呜<del>~~(&gt;_&lt;)</del>~~），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。</p>
+        <p>在使用zsh中，大概率会遇到</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zsh：command not found:xxx</span><br></pre></td></tr></table></figure>
+
+<p>的问题。当然我也遇到了（呜呜<del>(&gt;_&lt;)</del>），作为一个小白，也不知道该怎么解决，也只能上网搜一搜，然而，网上给出的解决方法一根本不能解决问题（具体请看blog）。小白就是小白，只能用各种暴力方法解决问题了，于是想到了第二种解决办法。</p>
 <ul>
 <li><p>解决方法一</p>
 <ul>
@@ -408,9 +410,12 @@
 </li>
 <li><p>解决方法二<br>由于笔者没有.bash_profile这一文件，但是网上搜索到的诸多教程都是解决方法一。看过几篇文章后突然想到我将nvm、node等环境配置全部写在了bashrc里边，然后就试着运行了一下‘source .bashrc’,结果报了一大堆错误。突然想到，我用的是zsh，bash当然会报错（卒）。<br>所以，解决方法二，就是将.bashrc中关于node的配置copy到.zshrc里边。然后再</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~.zshrc</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<p>问题就解决了。<br>就以node举栗(笔者使用nvm管理的node)：<br>将.bashrc中的<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR="$HOME/.nvm"</span><br><span class="line">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm</span><br><span class="line">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure></p>
+<p>问题就解决了。<br>就以node举栗(笔者使用nvm管理的node)：<br>将.bashrc中的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR="$HOME/.nvm"</span><br><span class="line">[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"  # This loads nvm</span><br><span class="line">[ -s "$NVM_DIR/bash_completion" ] &amp;&amp; \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure>
+
 <p>copy到~.zshrc下就可以啦。</p>
 <p>参考文章：<br><a href="[https://blog.csdn.net/lxn9492878lbl/article/details/80795413](https://blog.csdn.net/lxn9492878lbl/article/details/80795413">ubuntu 安装zsh终端</a><br><a href="[https://blog.csdn.net/u010954988/article/details/80404329](https://blog.csdn.net/u010954988/article/details/80404329">zsh:command not found</a></p>
 
@@ -528,7 +533,7 @@
               
                 <a href="/jialugong.github.io/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -550,7 +555,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -619,7 +624,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.4k</span>
+    <span title="Site words total count">2.9k</span>
   
 </div>
 
