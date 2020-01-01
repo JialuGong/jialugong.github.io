@@ -81,17 +81,17 @@
 
 
 
-<meta name="description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   #####箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#">
+<meta name="description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6中的新特性">
 <meta property="og:url" content="https://jialugong.github.io/jialugong.github.io/2019/10/10/ES5中的新特性/index.html">
 <meta property="og:site_name" content="four stacks and a half">
-<meta property="og:description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   #####箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#">
+<meta property="og:description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#123;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-10-13T04:32:24.264Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6中的新特性">
-<meta name="twitter:description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   #####箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#">
+<meta name="twitter:description" content="吐槽：呜呜呜～，之前忘记保存了，更新速度可能会变慢  写在之前 ：此文为个人的翻译+粗暴理解，原文   箭头函数与this语法大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量示例代码： 共享this语法    1234567891011var bob = &amp;#123;">
 
 
 
@@ -421,31 +421,24 @@
 <p>写在之前 ：此文为个人的翻译+粗暴理解，<a href="https://babeljs.io/docs/en/learn" target="_blank" rel="noopener">原文</a></p>
 </blockquote>
 <ul>
-<li>#####箭头函数与this语法<br>大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量<br>示例代码：<blockquote>
+<li><h5 id="箭头函数与this语法"><a href="#箭头函数与this语法" class="headerlink" title="箭头函数与this语法"></a>箭头函数与this语法</h5>大体上，箭头函数可以作为function的替代，但是有一点不同.箭头函数能和他周围的代码一样，共享this语法，如果一个箭头函数在另一个函数中，箭头函数能够共享其父函数的参数变量<br>示例代码：<blockquote>
 <p>共享this语法</p>
 </blockquote>
 </li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bob = &#123;</span><br><span class="line">    _name: <span class="string">"Bob"</span>,</span><br><span class="line">    _friends: [],</span><br><span class="line">    printFriends() &#123;</span><br><span class="line">      <span class="keyword">this</span>._friends.forEach(<span class="function"><span class="params">f</span> =&gt;</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>._name + <span class="string">" knows "</span> + f));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  bob._friends=[<span class="string">'Alice'</span>,<span class="string">'Ann'</span>,<span class="string">'Tom'</span>]</span><br><span class="line">  bob.printFriends()</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>调用父函数的参数变量</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">square</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> compute = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> numbers = []</span><br><span class="line">    <span class="keyword">for</span> (number <span class="keyword">of</span> <span class="built_in">arguments</span>) &#123;</span><br><span class="line">      numbers.push(number*number)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> numbers</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> compute()</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(square(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-
-<p>结果为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span> ]</span><br></pre></td></tr></table></figure>
-
+<p>结果为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ <span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span> ]</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>若箭头函数内为表达式（expression body），可隐式返回结果</p>
 </blockquote>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">callback</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(callback(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x+y)</span><br></pre></td></tr></table></figure>
-
-<p>结果为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure>
-
+<p>结果为<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span></span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>#####类<br>ES5中的类是一个基于原型OO模式的语法糖.简单单一的申明使得类模式的使用更加简单。类支持基于原型的继承，超级调用，实例以及静态方法和构造函数。</li>
+<li><h5 id="类"><a href="#类" class="headerlink" title="类"></a>类</h5>ES5中的类是一个基于原型OO模式的语法糖.简单单一的申明使得类模式的使用更加简单。类支持基于原型的继承，超级调用，实例以及静态方法和构造函数。</li>
 </ul>
 
       
@@ -538,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,7 +558,7 @@
               
                 <a href="/jialugong.github.io/archives">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -627,6 +629,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#箭头函数与this语法"><span class="nav-number">1.</span> <span class="nav-text">箭头函数与this语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类"><span class="nav-number">2.</span> <span class="nav-text">类</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -654,7 +672,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.7k</span>
+    <span title="Site words total count">3.3k</span>
   
 </div>
 
